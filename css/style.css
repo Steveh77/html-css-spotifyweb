@@ -6,33 +6,75 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* GENERICS */
+/* ----------GENERICS------------ */
+.text-center{
+    text-align: center;
+}
+.d-flex{
+    display: flex;
+}
+/* font size */
+.f-size20px{
+    font-size: 25px;
+}
 
-/* BODY */
+/* padding */
+.ptop-5px{
+    padding-top: 5px;
+}
+.ptop-10px{
+    padding-top: 10px;
+}
 
-/* HEADER */
+/* width and height */
+.h-30px{
+    height: 30px;
+}
+
+/* colors */
+.white{
+    color: white;
+}
+/* -------------BODY----------- */
+
+/* -------------HEADER---------- */
 .top-button{
     position: fixed;
     z-index: 0;
     width: 100vw;
     height: 120px;
     background-color: blueviolet;
+    opacity: 0.7;
 }
-/* MAIN */
+
+
+/* -----------MAIN----------------- */
 main{
     display: flex;
 }
+
+/* sidebar section */
 .sidebar{
-    position: relative;
-    width: 70px;
+    position: fixed;
+    width: 40px;
     z-index: 1;
     height: 100%;
     background-color: black;
 }
-.central-content{
-    padding-top: 120px;
+.logo{
+    filter: invert(1);
+    text-align: center;
 }
-/* FOOTER */
+/* central section */
+.central-content{
+    padding-left: 50px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+
+/* -----------FOOTER------------- */
+
 .bottom-console{
     position: fixed;
     bottom: 0;
@@ -45,7 +87,7 @@ main{
 
 
 
-/* media query */
+/* ---------Media query--------- */
 @media screen and (min-width:768px) {
     .sidebar{
         width: 200px;
