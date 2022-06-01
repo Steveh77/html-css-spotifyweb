@@ -9,3 +9,46 @@
 /* GENERICS */
 
 /* BODY */
+
+/* HEADER */
+.top-button{
+    position: fixed;
+    z-index: 0;
+    width: 100vw;
+    height: 120px;
+    background-color: blueviolet;
+}
+/* MAIN */
+main{
+    display: flex;
+}
+.sidebar{
+    position: relative;
+    width: 70px;
+    z-index: 1;
+    height: 100%;
+    background-color: black;
+}
+.central-content{
+    padding-top: 120px;
+}
+/* FOOTER */
+.bottom-console{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    height: 100px;
+    width: 100vw;
+    background-color: rgb(40,40,40);
+}
+
+
+
+/* media query */
+@media screen and (min-width:768px) {
+    .sidebar{
+        width: 200px;
+    }
+    
+}
