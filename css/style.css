@@ -1,12 +1,15 @@
 /* layout 576 768 992 */
 
-/* UTILS */
+/* ----------GENERICS------------ */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* ----------GENERICS------------ */
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+/* -----------UTILS--------------- */
 .text-center{
     text-align: center;
 }
@@ -14,37 +17,102 @@
     display: flex;
 }
 /* font size */
-.f-size20px{
+.f-size25px{
     font-size: 25px;
 }
+.f-size20px{
+    font-size: 20px;
+}
+.f-size45px{
+    font-size: 45px;
+}
 
+h3{
+    font-size: 15px;
+    padding-left: 5px;
+    padding-top: 10px;
+    font-weight: normal;
+    color:rgb(103,103,103)
+}
+main h5{
+    padding: 5px;
+}
+/* font-weight */
+.f-weightnormal{
+    font-weight: normal;
+}
 /* padding */
+.pleft-5px{
+    padding-left: 5px;
+}
+.pleft-10px{
+    padding-left: 10px;
+}
 .ptop-5px{
     padding-top: 5px;
 }
 .ptop-10px{
     padding-top: 10px;
 }
+.ptop-20px{
+    padding-top: 20px;
+}
+.p-bot-100px{
+    padding-bottom: 100px;
+}
+/* margin */
+.m-5px{
+    margin: 5px;
+}
+.m-10px{
+    margin: 10px;
+}
+.mleft--5px{
+    margin-left: -5px;
+}
+.margin-top-bottom10px{
+    margin: 10px 0;
+}
 
 /* width and height */
 .h-30px{
     height: 30px;
+}
+.h-45px{
+    height: 45px;
 }
 
 /* colors */
 .white{
     color: white;
 }
+/* border */
+.b-bottom1px{
+    border-bottom: 1px solid white;
+}
 /* -------------BODY----------- */
 
 /* -------------HEADER---------- */
-.top-button{
+.container-top-button{
+    display: flex;
+    justify-content: end;
+    align-items: center;
     position: fixed;
     z-index: 0;
     width: 100vw;
     height: 120px;
-    background-color: blueviolet;
+    background-color: rgb(8,11,18);
     opacity: 0.7;
+}
+.top-button{
+    height: 45px;
+    width: 200px;
+    margin-right: 30px;
+    border-radius: 50px;
+    border: 1px solid white;
+    color: white;
+    background-color: rgb(8,11,18);
+    transition: 0.3s;
 }
 
 
@@ -54,28 +122,58 @@ main{
 }
 
 /* sidebar section */
+    /* top */
 .sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     width: 40px;
     z-index: 1;
-    height: 100%;
+    min-height: 100%;
     background-color: black;
 }
 .logo{
     filter: invert(1);
     text-align: center;
 }
+.home-icon,.search-icon,.library-icon,.download-icon,.profile-icon{
+    display: flex;
+}
+.home-icon-name,.search-icon-name,.library-icon-name,.download-icon-name,.profile-icon-name,.playlist{
+    display: none;
+}
+    /* logo tablet-desktop */
+.logo-tablet-desktop{
+    display: none;
+}
+
+    /* bottom */
+.profile-icon-img{
+    height: 30px;
+    width: 30px;
+    background-color: rgb(194,194,194);
+    background-image: url(../img/profile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    margin: auto;
+}
+
 /* central section */
 .central-content{
     padding-left: 50px;
     padding-top: 120px;
     padding-bottom: 120px;
+    background-color: rgb(20,25,34);
+    color: white; 
 }
 
 
 /* -----------FOOTER------------- */
 
-.bottom-console{
+.bottom-console-container{
+    display: flex;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -84,7 +182,23 @@ main{
     width: 100vw;
     background-color: rgb(40,40,40);
 }
-
+.console-mini-container{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.song-description{
+    padding-left: 10px;
+    color: rgb(126,126,126);
+}
+.favourites{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    
+}
 
 
 /* ---------Media query--------- */
@@ -92,5 +206,48 @@ main{
     .sidebar{
         width: 200px;
     }
+    .logo{
+        display: none;
+    }
+    .logo-tablet-desktop{
+        display: block;
+    }
+    .home-icon-name,.search-icon-name,.library-icon-name,.download-icon-name,.profile-icon-name,.playlist{
+        display: block;
+    }
+    .download-icon{
+        border-bottom: 1px solid white;
+    }
+    .profile-icon-img{
+        margin: 0 7px;
+    }
+    .central-content{
+        padding-left: 210px;
+    }
+    /* footer console */
     
+}   
+
+
+
+/* ----------Hover---------- */
+.home-icon,.search-icon,.library-icon:hover{
+    color: white;
+    cursor: pointer;
+}
+h3:hover{
+    color: white;
+    cursor: pointer;
+}
+/* top button */
+button.top-button:hover{
+    height: 55px;
+    width: 220px;
+    font-size: 15px;
+}
+
+/* footer console */
+.fa-solid.fa-heart:hover{
+    color: red;
+    cursor: pointer;
 }

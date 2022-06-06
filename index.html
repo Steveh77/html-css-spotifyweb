@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <title>Spotify</title>
 </head>
 <body>
     <!-- HEADER -->
     <header>
         <section id="top-button-section">
-            <div class="top-button"></div>
+            <div class="container-top-button">
+                <button class="top-button">EFFETTUA L'UPGRADE</button>
+            </div>
         </section>
     </header>
     <!-- MAIN -->
@@ -20,17 +25,64 @@
         <!-- sidebar -->
         <section id="sidebar-section">
             <div class="sidebar">
-                <div class="logo ptop-5px">
-                   <img src="img/favicon.ico" alt="icon"> 
+                <div class="top">
+                    <div class="logo ptop-5px">
+                       <img src="img/favicon.ico" alt="icon"> 
+                    </div>
+                    <!-- logo tablet/desktop -->
+                    <div class="logo-tablet-desktop ptop-5px">
+                        <img class="h-45px" src="img/logo.svg" alt="">
+                    </div>
+                    <div class="home-icon pleft-5px white ptop-10px">
+                        <img class="h-30px" src="img/home.svg" alt="">
+                        <!-- display block at 768px -->
+                        <div class="home-icon-name">
+                            <h3>Home</h3>
+                        </div>
+                    </div>
+                    <div class="search-icon pleft-5px white f-size25px ptop-10px">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <!-- display block at 768px -->
+                        <div class="search-icon-name">
+                            <h3 class="pleft-10px">Cerca</h3>
+                        </div>
+                    </div>
+                    <div class="library-icon pleft-5px white ptop-10px">
+                        <img class="h-30px" src="img/libreria.svg" alt="">
+                        <!-- display block at 768px -->
+                        <div class="library-icon-name">
+                            <h3>La tua libreria</h3>
+                        </div>
+                    </div>
+                    <div class="playlist white ptop-20px">
+                        <h2 class="f-size20px pleft-5px">Playlist</h2>
+                        <div class="crea-playlist d-flex margin-top-bottom10px">
+                            <i class="fa-solid fa-square-plus f-size45px pleft-5px"></i>
+                            <h3>Crea Playlist</h3>
+                        </div>
+                        <h3>Nome Playlist</h3>
+                        <h3>Nome Playlist</h3>
+                        <h3>Nome Playlist</h3>
+                    </div>
+
                 </div>
-                <div class="house-logo text-center white ptop-10px">
-                    <img class="h-30px" src="img/home.svg" alt="">
-                </div>
-                <div class="search-logo text-center white f-size20px ptop-10px">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <div class="library-logo text-center white ptop-10px">
-                    <img class="h-30px" src="img/libreria.svg" alt="">
+                <div class="bot p-bot-100px">
+                    <div class="download-icon m-10px white">
+                        <img class="h-30px mleft--5px" src="img/download.svg" alt="download">
+                        <!-- display block at 768px -->
+                        <div class="download-icon-name">
+                            <h5>Installa app</h5>
+                        </div>
+                    </div>
+                    <div class="profile-icon">
+                        <div class="profile-icon-img">
+                           
+                        </div>
+                        <div class="profile-icon-name white">
+                            <h2>John Doe</h2>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -143,7 +195,31 @@
     <footer>
         <!-- console -->
         <section id="console-section">
-            <div class="bottom-console"></div>
+            <div class="bottom-console-container">
+                <!-- song played -->
+                <div class="song-played console-mini-container">
+                    <div>
+                        <img src="img/sinister.jpeg" alt="" height="50px">
+                    </div>
+                    <div class="song-description">
+                        <h4 class="white">Sinister</h4>
+                        <h5>Brano</h5>
+                        <h5>Nome</h5>
+                    </div>
+                </div>
+                <!-- favourites -->
+                <div class="favourites console-mini-container"> 
+                    <div>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-folder"></i>
+                    </div>   
+                </div>
+
+                <div></div>
+                <div></div>
+            </div>
         </section>
     </footer>
    
