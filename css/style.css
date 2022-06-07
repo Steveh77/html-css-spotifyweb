@@ -1,4 +1,4 @@
-/* layout 576 768 992 */
+/* layout 576 768 992 1220*/
 
 /* ----------GENERICS------------ */
 *{
@@ -23,6 +23,9 @@ body{
 .j-content-center{
     justify-content: center;
 }
+.j-content-end{
+    justify-content: end;
+}
 /* font size */
 .f-size25px{
     font-size: 25px;
@@ -32,6 +35,9 @@ body{
 }
 .f-size45px{
     font-size: 45px;
+}
+.f-size35px {
+    font-size: 35px;
 }
 h2{
     font-size: 14px;
@@ -58,15 +64,21 @@ main h5{
     padding: 5px;
 }
 hr{
-    width: 20px;
-    height: 1px;
-    border: 1px solid red;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(90,90,90);
+    border-radius: 50px;
+    border: none;
+    margin: 0 5px;
 }
 /* font-weight */
 .f-weightnormal{
     font-weight: normal;
 }
 /* padding */
+.p7px{
+    padding: 7px;
+}
 .pleft-5px{
     padding-left: 5px;
 }
@@ -121,7 +133,6 @@ hr{
 .w-60{
     width: 60%;
 }
-
 /* colors */
 .white{
     color: white;
@@ -141,7 +152,7 @@ hr{
     justify-content: end;
     align-items: center;
     position: fixed;
-    z-index: 0;
+    z-index: 1;
     width: 100vw;
     height: 120px;
     background-color: rgb(8,11,18);
@@ -172,7 +183,7 @@ main{
     justify-content: space-between;
     position: fixed;
     width: 40px;
-    z-index: 1;
+    z-index: 2;
     min-height: 100%;
     background-color: black;
 }
@@ -213,14 +224,24 @@ main{
 .deck{
     display: flex;
     flex-wrap: wrap;
+    margin-top: 40px;
 }
 .card{
-    width: 240px;
+    position: relative;
+    width: 50%;
+    margin: -10px;
+    padding: 15px;
+    
 }
 .card-img{
-    height: 240px;
+    width: 100%;
 }
-
+.centered-play-btn{
+    position: absolute;
+    left: 40%;
+    top: 35%;
+    font-size: 0px;
+}
 
 /* -----------FOOTER------------- */
 
@@ -230,7 +251,7 @@ main{
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     height: 100px;
     width: 100vw;
     background-color: rgb(40,40,40);
@@ -254,15 +275,27 @@ main{
 .player{
     flex-direction: column;
     justify-content: center;
+    width: 100%;
     color: white;
-    
+    font-size: 20px;
+}
+.progress-bar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: 13px;
 }
 .volume{
     justify-content: center;
     color: white;
+    margin-right: 15px;
+}
+.hr-volume{
+    width: 70px;
 }
 
 /* ---------Media query--------- */
+        /* tablet */
 @media screen and (min-width:768px) {
     .sidebar{
         width: 200px;
@@ -285,9 +318,42 @@ main{
     .central-content{
         padding-left: 210px;
     }
+    .card{
+        width: 25%;
+    }
     /* footer console */
     
 }   
+        /* desktop */
+@media screen and (min-width:992px){
+    .card{
+        width: 25%;
+    }
+    .favourites{
+        flex-direction: row;
+    }
+    .fa-solid.fa-heart{
+        margin: 10px;
+    }
+    .fa-solid.fa-list,.fa-solid.fa-tv,.fa-solid.fa-volume-high{
+        margin: 10px;
+    }
+    .hr-volume{
+        width: 100px;
+    }
+}
+        /* large desktop */
+@media screen and (min-width:1220px){
+    .card{
+        width: calc(100%/6);
+    }
+    .fa-solid.fa-list,.fa-solid.fa-tv,.fa-solid.fa-volume-high{
+        margin: 10px;
+    }
+    .hr-volume{
+        width: 100px;
+    }
+}
 
 
 
@@ -311,12 +377,26 @@ button.top-button:hover{
     width: 220px;
     font-size: 15px;
 }
-.card-img:hover{
+.card:hover figure{
+    transform: scale(1.05);
+    transform: translateY(-10px);
     cursor: pointer;
-    background-color: black;
-    opacity: 0.5;
+    color: white;
+    opacity: 0.7;
+    transition: transform 0.5s; 
 }
 
+.card:hover figure::after{
+    position: absolute;
+    font: var(--fa-font-regular );
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 40px;
+    content:"\f144";
+    color: white;
+
+}
 /* footer console */
 .fa-solid.fa-heart:hover{
     color: red;
